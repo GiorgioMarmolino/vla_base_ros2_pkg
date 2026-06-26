@@ -19,7 +19,7 @@ class VLABaseNode(Node):
         super().__init__(node_name)
 
         # ---- parameters ----
-        self.declare_parameter("image_topic", "")
+        self.declare_parameter("image_topic", "/sensors/front_camera/color/image_raw/compressed")
         self.declare_parameter("goal_topic", "/goal_instruction")
         self.declare_parameter("action_topic", f"/{vla_model}/action")
         self.declare_parameter("reset_topic", f"/{vla_model}/reset")
